@@ -1,0 +1,12 @@
+
+# What additional architectural change can be made to reduce the internet facing attack surface of the web application instance.
+- Add in-application authentication and remove privileged users' direct access to S3 buckets, always following the principle of least privilege.
+
+# Assuming the IAM permissions for the S3 bucket are still insecure, would creating VPC private endpoints for S3 prevent the unauthorized access to the secrets bucket.
+- This statement is wrong. This action can help a little, but the S3 is a global resource and the IAM permissions is the best and correct way to hardening security.
+
+# Will applying default encryption setting to the s3 buckets encrypt the data that already exists?
+- No. To encrypt existing data, you need to copy existing unencrypted files and paste them into the same bucket. For this process, the user can use the S3 Batch Operations resource.
+
+# What would happen if the original cloud formation templates are applied to this environment.
+- The update will fail due to the difference between the environments and the AWS will show options such as possible solutions to the problem.

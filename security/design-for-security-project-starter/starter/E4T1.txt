@@ -1,0 +1,13 @@
+# Identify 2-3 changes that can be made to our environment to prevent an ssh brute force attack from the internet.
+
+Changes:
+1 - Apply the principle of least privilege to AWS resources to restrict the resource's permission level to only what it needs.
+
+2 - Configure AWS WAF to hardening instances security against accesses from the internet.
+
+3 - Configuring authentication methods on the application and cloud environment.
+
+
+# Neither instance should have had access to the secret recipes bucket, in the even that instance API credentials were compromised how could we have prevented access to sensitive data.
+
+Answer: Encrypt the data using the standard S3 encryption method or some other encryption method through the client-side or server-side layer of the application.

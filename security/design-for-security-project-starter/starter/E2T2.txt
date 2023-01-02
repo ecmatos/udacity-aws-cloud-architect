@@ -1,0 +1,33 @@
+Research and analyze which of the vulnerabilities appear to be related to the code that was deployed for the environment in this project.
+
+Bonus - provide recommendations on how to remediate the vulnerabilities.
+
+Vulnerabilities:
+
+1 - Instances with public IP address. 
+Recommendations: Use a non-default VPC, deploy instances in private subnets.
+
+2 - Resources connection ports reachable from the internet.
+Recommendations: Deploy the resources in no-default security groups or change security groups of existing resources, apply NAT Gateway configurations and NACLs or WAFs.
+
+3 - IAM inline policies that allow decryption actions.
+Recommendations: Apply Roles and Policies using the best practice of least privilegies.
+
+4 - IAM customer managed policies that allow wildcard actions for services.
+Recommendations: Apply Roles and Policies using the best practice of least privilegies.
+
+5 - EC2 instances without Instance Metadata Service Version (IMDSv2).
+Recommendations: Request instance metadata and modify the Amazon EC2 metadata options to IMDSv2 or configure the metadata for new instances.
+
+6 - Port ranges reachable from an Unternet Gateway.
+Recommendations: Restrict access to resouces by modifying security groups or ACLs in the network path.
+
+7 - CloudFormation stacks not connected with Simple Notification Service (SNS).
+Recommendations: Update CloudFormation stacks adding SNS integration in stacks.
+
+8 - Use root user.
+Recommendations: Don't use root user, because this profile have unrestricted access to all services and resources. Follow the best practice of least privilege and apply IAM policies to groups and roles instead.
+
+9 - Logs and metrics filter and alarms doesn't exist.
+Recommendations: Create and configure metrics and alarms for resources using CloudTrail, CloudWatch, SNS and AWS Config to monitor actions and changes made to resources, authentication failures and schedule deletions of resources.
+

@@ -1,0 +1,11 @@
+Based on the architecture diagram, and the steps you have taken so far to upload data and access the application web service, identify at least 2 obvious poor practices as it relates to security.  Include justification.
+
+# Poor practice 1
+The web service instance was deployed on Public Subnet and the application or instance doesn't have any security hardening. In this case, we can deploy the instance in the Private Subnet, apply a WAF to defend against application level exploits. 
+
+
+# Poor practice 2
+The IAM role and policy was applyed on web service instance and and this practice facilitates access to the application, allowing the attacker to gain free access to IAM and AWS resources. For this issue, IAM rules and policies can be applied at the AWS API layer following best practices of the least privilege.
+
+# Poor practice 3
+The solution doesn't have any monitoring tools and alarms. Thus, it becomes a fragile infrastructure with low resources visibility, insights and susceptible to problems and attacks.

@@ -1,0 +1,6 @@
+# Describe GuardDuty findings that were detected related to the brute force attack
+
+# Research the AWS Guard Duty documentation page and explain how GuardDuty may have detected this attack - i.e. what was its source of information.
+
+# Answer
+Data doesn't seem to be coming in correctly to the AWS GuardDuty feature. I've waited for just over 24 hours to try and get results, but the resource still has no data, as evidenced by "E3T1_guardduty.png". According to my research, currently GuardDuty is still a black box for Udacity tutors and they instructed me to explain the situation in this exercise.

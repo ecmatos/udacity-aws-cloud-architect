@@ -1,0 +1,9 @@
+# Identify tools that will allow you to do the following:
+a. Scan infrastructure as code templates
+- Regula
+
+b. Scan AMI’s or containers for OS vulnerabilities
+- Clair, Amazon ECR and AWS Inspector
+
+c. Scan an AWS environment for cloud configuration vulnerabilities.
+- AWS Config, AWS Inspector
